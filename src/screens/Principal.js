@@ -9,7 +9,6 @@ import {
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-
 export default function Principal({ navigation }) {
   const handleBarbeiros = () => {
     navigation.navigate("Barbeiros");
@@ -31,7 +30,7 @@ export default function Principal({ navigation }) {
     <ImageBackground
       style={styles.imgBackground}
       resizeMode="cover"
-      source={require("../../assets/barber.png")}
+      source={require("../../assets/salon11.png")}
     >
       <View style={styles.container}>
         <View style={styles.text}>
@@ -45,9 +44,17 @@ export default function Principal({ navigation }) {
           >
             Seja Bem Vindo ao app da Barber Shop
           </Text>
-          <Text style={styles.text}>
+          <Text
+            style={{
+              marginLeft: 18,
+              marginTop: 20,
+              color: "#fff",
+              fontFamily: "roboto",
+              fontSize: 18,
+            }}
+          >
             Aqui Você pode ver os tipos de corte, marcar horário com os melhores
-            Barbeiros do brasil
+            Barbeiros do Brasil.
           </Text>
           <Text style={styles.text}>Clique no que você deseja:</Text>
           <View style={styles.img}>
@@ -57,7 +64,10 @@ export default function Principal({ navigation }) {
                 source={require("../../assets/barbeiros.png")}
               ></Image>
             </TouchableOpacity>
-            <TouchableOpacity style={{ margin: 15, marginLeft: 40 }} onPress={handleCuts}>
+            <TouchableOpacity
+              style={{ margin: 15, marginLeft: 40 }}
+              onPress={handleCuts}
+            >
               <Image
                 style={styles.image}
                 source={require("../../assets/cortes.png")}
@@ -65,20 +75,22 @@ export default function Principal({ navigation }) {
             </TouchableOpacity>
           </View>
           <View style={styles.img}>
-          <TouchableOpacity style={{ margin: 15 }} onPress={handleSchedule}>
+            <TouchableOpacity style={{ margin: 15 }} onPress={handleSchedule}>
               <Image
                 style={styles.image}
                 source={require("../../assets/marcarH.png")}
               ></Image>
             </TouchableOpacity>
-            <TouchableOpacity style={{ margin: 15,marginLeft: 40 }} onPress={handlePrice}>
+            <TouchableOpacity
+              style={{ margin: 15, marginLeft: 40 }}
+              onPress={handlePrice}
+            >
               <Image
                 style={styles.image}
                 source={require("../../assets/preco.png")}
               ></Image>
             </TouchableOpacity>
-            
-            </View>
+          </View>
         </View>
         <Text style={styles.comp}> Feito por Cmach Company </Text>
       </View>
@@ -87,13 +99,7 @@ export default function Principal({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    // backgroundColor: "#ddd",
-    alignItems: "flex-start",
-    // justifyContent: "",
-    // marginLeft: 15
-  },
+  container: {},
   text: {
     // backgroundColor: "#000",
     justifyContent: "center",
@@ -102,7 +108,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
     color: "#fff",
     fontFamily: "roboto",
-    fontSize: 15,
+    fontSize: 18,
   },
   imgBackground: {
     width: "100%",

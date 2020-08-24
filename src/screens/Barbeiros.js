@@ -28,105 +28,61 @@ export default function Barbeiros({ navigation }) {
     <ImageBackground
       style={styles.imgBackground}
       resizeMode="cover"
-      source={require("../../assets/img.jpg")}
+      source={require("../../assets/salon3.jpg")}
     >
       <View style={styles.container}>
         <Text
-          style={{ fontFamily: "roboto-bold", fontSize: 25, color: "#fff" }}
+          style={{ fontFamily: "roboto-bold", fontSize: 25, color: "#000" }}
         >
           Esses são nossos Barbeiros
         </Text>
 
-        
         <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            pagingEnabled={true}
-            // snapToInterval={300}
-            snapToAlignment={"center"}
-            decelerationRate={"fast"}
-            // contentContainerStyle={{ paddingHorizontal: 35 }}
-          >
-        <View style={styles.content}>
-       
-            <TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/pessoa.jpg")}
-              ></Image>
-              <Text style={styles.textCard}>Fábio</Text>
-            </TouchableOpacity>
-            {/* <TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/img.jpg")}
-              ></Image>
-              <Text style={styles.barbeiros}>Fábio</Text>
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/ces.jpeg")}
-              ></Image>
-              <Text style={styles.barbeiros}>César</Text>
-            </TouchableOpacity>
-             */}
-          
-        </View>
-        <View style={styles.content1}>
-       
-            {/* <TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/pessoa.jpg")}
-              ></Image>
-              <Text style={styles.barbeiros}>Fábio</Text>
-            </TouchableOpacity> */}
-            <TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/img.jpg")}
-              ></Image>
-              <Text style={styles.textCard}>Fábio</Text>
-            </TouchableOpacity>
-            {/* <TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/ces.jpeg")}
-              ></Image>
-              <Text style={styles.barbeiros}>César</Text>
-            </TouchableOpacity> */}
-            
-          
-        </View>
-        <View style={styles.content2}>
-       
-            {/* <TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/pessoa.jpg")}
-              ></Image>
-              <Text style={styles.barbeiros}>Fábio</Text>
-            </TouchableOpacity> */}
-            {/* <TouchableOpacity>
-              <Image
-                style={styles.image}
-                source={require("../../assets/img.jpg")}
-              ></Image>
-              <Text style={styles.barbeiros}>Fábio</Text>
-            </TouchableOpacity> */}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled={true}
+          // snapToInterval={300}
+          snapToAlignment={"center"}
+          decelerationRate={"fast"}
+          // contentContainerStyle={{ paddingHorizontal: 35 }}
+        >
+          <View style={styles.content}>
             <Image
-                style={styles.image}
-                source={require("../../assets/barber.png")}
-              ></Image>
-              <Text style={styles.textCard}>César</Text>
-              
+              style={styles.image}
+              source={require("../../assets/pessoa.jpg")}
+            ></Image>
+            <Text style={styles.textCard}>Fábio</Text>
             <TouchableOpacity onPress={handlerHours}>
-            <Text style={styles.textCard1}>Clique aqui Para Marcar um Horário.</Text>
+              <Text style={styles.textHours}>
+                Clique aqui Para Marcar um Horário.
+              </Text>
             </TouchableOpacity>
-            
-          
-        </View>
+          </View>
+          <View style={styles.content}>
+            <Image
+              style={styles.image}
+              source={require("../../assets/img.jpg")}
+            ></Image>
+            <Text style={styles.textCard}>Carlos</Text>
+            <TouchableOpacity onPress={handlerHours}>
+              <Text style={styles.textHours}>
+                Clique aqui Para Marcar um Horário.
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.content}>
+            <Image
+              style={styles.image}
+              source={require("../../assets/barber.png")}
+            ></Image>
+            <Text style={styles.textCard}>César</Text>
+
+            <TouchableOpacity onPress={handlerHours}>
+              <Text style={styles.textHours}>
+                Clique aqui Para Marcar um Horário.
+              </Text>
+            </TouchableOpacity>
+          </View>
         </ScrollView>
       </View>
     </ImageBackground>
@@ -174,37 +130,6 @@ const styles = StyleSheet.create({
   content: {
     borderRadius: 10,
     elevation: 3,
-    backgroundColor: "#ddd",
-    shadowOffset: { width: 350, height: 200 },
-    shadowColor: "#333",
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
-    marginHorizontal: 30,
-    marginVertical: 50,
-    width: 300,
-    height: 500,
-    // marginLeft: 20
-    // flexDirection: 'row',
-    // marginTop: 16,
-    // marginBottom: 32,
-  },
-  content1: {
-    borderRadius: 10,
-    elevation: 3,
-    backgroundColor: "#ddd",
-    shadowOffset: { width: 350, height: 200 },
-    shadowColor: "#333",
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
-    marginHorizontal: 30,
-    marginVertical: 50,
-    width: 300,
-    height: 500,
-    marginLeft: 65
-  },
-  content2: {
-    borderRadius: 10,
-    elevation: 3,
     backgroundColor: "#000",
     shadowOffset: { width: 350, height: 200 },
     shadowColor: "#000",
@@ -214,7 +139,7 @@ const styles = StyleSheet.create({
     marginVertical: 50,
     width: 300,
     height: 500,
-    marginLeft: 65
+    marginLeft: 65,
   },
   textCard: {
     fontFamily: "roboto-bold",
@@ -222,13 +147,13 @@ const styles = StyleSheet.create({
     color: "#fff",
     // marginLeft: 5,
     paddingLeft: 110,
-    borderWidth: 2,
-    borderRadius: 5,
-    borderColor: '#fff',
+    // borderWidth: 2,
+    // borderRadius: 5,
+    // borderColor: "#fff",
     alignItems: "center",
-    justifyContent: 'center'
+    justifyContent: "center",
   },
-  textCard1: {
+  textHours: {
     fontFamily: "roboto",
     fontSize: 20,
     color: "#fff",
@@ -236,7 +161,7 @@ const styles = StyleSheet.create({
     paddingLeft: 5,
     borderWidth: 2,
     borderRadius: 20,
-    borderColor: '#fff',
+    // borderColor: "#fff",
     marginTop: 15,
-  }
+  },
 });

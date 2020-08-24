@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
+
 export default function Valores() {
     return (
         <View>
@@ -8,3 +9,4 @@ export default function Valores() {
         </View>
     )
 }
+

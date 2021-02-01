@@ -118,11 +118,13 @@ const styles = StyleSheet.create({
     // opacity: 0.6
   },
   comp: {
-    marginTop: 150,
-    marginLeft: 110,
+    marginTop: 50,
+    // marginLeft: 110,
     justifyContent: "center",
     alignItems: "center",
+    textAlign: "center",
     color: "#ddd",
+    fontSize: 10,
   },
   bt: {
     borderWidth: 1,

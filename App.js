@@ -1,25 +1,31 @@
-import React, { useState } from "react";
-import * as Font from "expo-font";
-import { Text, View } from "react-native";
-import { AppLoading } from "expo";
+import React, { useState } from 'react';
+import AppLoading from 'expo-app-loading';
 
-import Routes from "./src/routes";
+import Routes from './src/routes';
 
-const getFonts = () => {
-  return Font.loadAsync({
-    roboto: require("./assets/fonts/Roboto-Regular.ttf"),
-    "roboto-bold": require("./assets/fonts/Roboto-Bold.ttf"),
-  });
-};
+import {
+  useFonts,
+  Roboto_400Regular,
+  Roboto_500Medium,
+  Roboto_700Bold,
+} from '@expo-google-fonts/roboto';
+import { StatusBar } from 'react-native';
 
 export default function App() {
-  // const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [fontsLoaded] = useFonts({
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_700Bold,
+  });
 
-  // if (!fontsLoaded) {
-  //   return (
-  //     <AppLoading startAsync={getFonts} onFinish={() => setFontsLoaded(true)} />
-  //   );
-  // }
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
 
-  return <Routes />;
+  return (
+    <>
+      <StatusBar style='light' backgroundColor='#391803' />
+      <Routes />
+    </>
+  );
 }
